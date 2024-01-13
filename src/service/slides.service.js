@@ -12,6 +12,7 @@ const useSlideApi = async () => {
         dispatch({ type: ACTIONS.SUCCESS, data: response.data });
         return;
       }
+      console.log('--------------test')
       dispatch({ type: ACTIONS.ERROR, error: response.error });
     };
      getSlides();

@@ -1,5 +1,5 @@
 {
-  "homepage":"https://sandhani45.github.io/shaik-rak-react-animation/",
+  "homepage":"https://sandhani45.github.io/shaik-rak-react-animation",
   "name": "shaik-task",
   "version": "0.1.0",
   "private": true,
@@ -41,7 +41,7 @@
     ]
   },
   "msw": {
-    "workerDirectory": "./public"
+    "workerDirectory": "./public/mockServiceWorker.js"
   },
   "devDependencies": {
     "gh-pages": "^6.1.1"
