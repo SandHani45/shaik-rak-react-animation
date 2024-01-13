@@ -1,0 +1,14 @@
+{
+    "reviewHeader":"An overview of your answers",
+    "reviewList":[
+       {
+          "title":"How was your week overall",
+          "isLike":false,
+          "subTitle":"How was your week overall"
+       }
+    ],
+    "reviewComment":{
+       "title":"How was your week overall",
+       "icon":"👍"
+    }
+ }
