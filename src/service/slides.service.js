@@ -7,7 +7,7 @@ const useSlideApi = async () => {
   useEffect(() => {
     dispatch({ type: ACTIONS.CALL_API });
     const getSlides = async () => {
-      let response = await axios.get("/slides");
+      let response = await axios.get("https://sandhani45.github.io/shaik-rak-react-animation/slides");
       if (response.status == 200) {
         dispatch({ type: ACTIONS.SUCCESS, data: response.data });
         return;
