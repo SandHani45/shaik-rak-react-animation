@@ -7,7 +7,6 @@ function githubApi(path){
 }
 export const handlers = [
     http.get(githubApi('slides'), (req, res, ctx)=>{
-        console.log('----------------')
         return HttpResponse.json(slideMock)
     }),
     http.get(githubApi('review-list'), (req, res, ctx)=>{

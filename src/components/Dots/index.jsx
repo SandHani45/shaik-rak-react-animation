@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
  const Dots = ({ slides, active, setActive }) => {
   return (
-    <ul className="dots">
+    <ul className="dots" data-testid="dots">
       {slides.map((child, index) => (
-        <li className={index === active ? "active" : ""}>
+        <li className={index === active ? "active" : ""} key={index}>
           <button onClick={() => setActive(index)}>{index + 1}</button>
         </li>
       ))}
@@ -13,7 +13,7 @@ import PropTypes from "prop-types";
 
 Dots.propTypes = {
   slides: PropTypes.array.isRequired,
-  active: PropTypes.bool.isRequired,
+  active: PropTypes.number.isRequired,
   setActive: PropTypes.func.isRequired
 };
 

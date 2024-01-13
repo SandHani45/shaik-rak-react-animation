@@ -47,16 +47,15 @@ const Slide = ({ slides, reviewList }) => {
     return alert("review");
   };
 
-  if(slides.length === 0){
-    return (
-        <h1>No Slide's Available</h1>
-    )
+  if (slides.length === 0) {
+    return <h1>No Slide's Available</h1>;
   }
   return (
     <>
       <div
         className="slides"
         style={{ transform: `translate3d(0, ${percentage}, 0)` }}
+        data-testid="slides"
       >
         {slides.map((child, index) => {
           const optionList = !!child.options && child.options;
@@ -105,7 +104,9 @@ const Slide = ({ slides, reviewList }) => {
           );
         })}
       </div>
-      <Dots slides={slides} active={active} setActive={setActive} />
+      {slides.length > 0 && (
+        <Dots slides={slides} active={active} setActive={setActive} />
+      )}
     </>
   );
 };
