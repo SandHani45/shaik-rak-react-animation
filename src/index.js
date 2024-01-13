@@ -5,15 +5,34 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { GlobalProvider } from "./context/global.context";
 
-const { worker } = require("./mocks/browser");
-worker.start();
+ 
+async function enableMocking() {
+  if (process.env.NODE_ENV !== 'development') {
+    return
+  }
+ 
+  const { worker } = await import('./mocks/browser')
+ 
+  // `worker.start()` returns a Promise that resolves
+  // once the Service Worker is up and ready to intercept requests.
+  return worker.start()
+}
+ 
+enableMocking().then(() => {
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(
+    <GlobalProvider>
+      <App />
+    </GlobalProvider>
+  );
+})
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <GlobalProvider>
-    <App />
-  </GlobalProvider>
-);
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(
+//   <GlobalProvider>
+//     <App />
+//   </GlobalProvider>
+// );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
