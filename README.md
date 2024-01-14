@@ -1,3 +1,10 @@
+**Tech: Javascript, React, MSW Mock API, Context API, React Testing Library ( Unit Testing ).**
+
+UI 
+
+https://github.com/SandHani45/shaik-rak-react-animation/assets/30631105/55f4e28d-2c53-4821-a108-3817e5fe4a41
+
+
 ## Step 1
 
 ### `git clone https://github.com/SandHani45/shaik-rak-react-animation.git`
