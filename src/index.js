@@ -5,20 +5,18 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { GlobalProvider } from "./context/global.context";
 
-
- 
 async function enableMocking() {
-  if (process.env.NODE_ENV == 'development') {
-    const { worker } = await import('./mocks/browser')
- 
+  if (process.env.NODE_ENV == "development") {
+    const { worker } = await import("./mocks/browser");
+
     // `worker.start()` returns a Promise that resolves
     // once the Service Worker is up and ready to intercept requests.
-    return worker.start()
+    return worker.start();
   }
- 
-  return Promise.resolve()
+
+  return Promise.resolve();
 }
- 
+
 enableMocking().then(() => {
   const root = ReactDOM.createRoot(document.getElementById("root"));
   root.render(
@@ -26,6 +24,6 @@ enableMocking().then(() => {
       <App />
     </GlobalProvider>
   );
-})
+});
 
 reportWebVitals();

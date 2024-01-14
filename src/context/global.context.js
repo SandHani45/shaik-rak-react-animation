@@ -7,7 +7,7 @@ const GlobalContext = createContext(null);
 
 const GlobalProvider = ({ children }) => {
   const [slides, setSlides] = useState(initialState);
-  const [reviewList, setReviewList] = useState(initialState)
+  const [reviewList, setReviewList] = useState(initialState);
 
   // Slide Service
   useSlideApi().then((res) => {
@@ -15,15 +15,14 @@ const GlobalProvider = ({ children }) => {
   });
 
   // Review List API
-
-  useReviewListApi().then((res)=>{
-    setReviewList(res)
-  })
+  useReviewListApi().then((res) => {
+    setReviewList(res);
+  });
   const globalValues = useMemo(
     () => ({
       slides,
       setSlides,
-      reviewList
+      reviewList,
     }),
     [slides, setSlides, reviewList]
   );

@@ -14,11 +14,10 @@ const useReviewListApi = async () => {
       }
       dispatch({ type: ACTIONS.ERROR, error: response.error });
     };
-     getSlides();
-  },[])
+    getSlides();
+  }, []);
 
- return state
-
+  return state;
 };
 
 export { useReviewListApi };

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
- const Dots = ({ slides, active, setActive }) => {
+const Dots = ({ slides, active, setActive }) => {
   return (
     <ul className="dots" data-testid="dots">
       {slides.map((child, index) => (
@@ -14,9 +14,7 @@ import PropTypes from "prop-types";
 Dots.propTypes = {
   slides: PropTypes.array.isRequired,
   active: PropTypes.number.isRequired,
-  setActive: PropTypes.func.isRequired
+  setActive: PropTypes.func.isRequired,
 };
 
-export {
-  Dots
-}
+export { Dots };
