@@ -4,10 +4,13 @@
 
 In the project directory, you can run:
 
+## Step 2
+
 ### `npm install`
 
 Once all dependencies installed, you can run 
 
+## Step 3
 
 ### `npm start`
 
@@ -16,6 +19,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
 
 ### `npm test`
 
