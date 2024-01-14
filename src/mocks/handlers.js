@@ -3,7 +3,7 @@ import slideMock from './../mocks/slide.json';
 import reviewMock from './../mocks/review.json'
 
 function githubApi(path){
-    return `https://sandhani45.github.io/shaik-rak-react-animation/${path}`
+    return `/${path}`
 }
 export const handlers = [
     http.get(githubApi('slides'), (req, res, ctx)=>{

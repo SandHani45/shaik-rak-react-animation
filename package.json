@@ -1,5 +1,4 @@
 {
-  "homepage":"https://sandhani45.github.io/shaik-rak-react-animation",
   "name": "shaik-task",
   "version": "0.1.0",
   "private": true,
@@ -19,8 +18,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
     "eject": "react-scripts eject",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -41,7 +40,7 @@
     ]
   },
   "msw": {
-    "workerDirectory": "./public/mockServiceWorker.js"
+    "workerDirectory": "publicnpx"
   },
   "devDependencies": {
     "gh-pages": "^6.1.1"

@@ -7,7 +7,7 @@ const useReviewListApi = async () => {
   useEffect(() => {
     dispatch({ type: ACTIONS.CALL_API });
     const getSlides = async () => {
-      let response = await axios.get("https://sandhani45.github.io/shaik-rak-react-animation/review-list");
+      let response = await axios.get("/review-list");
       if (response.status == 200) {
         dispatch({ type: ACTIONS.SUCCESS, data: response.data });
         return;
