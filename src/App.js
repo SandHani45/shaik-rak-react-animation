@@ -2,7 +2,7 @@ import "./App.css";
 import { lazy, Suspense, useContext } from "react";
 import Loader from "./components/Loader";
 import { GlobalContext } from "./context/global.context";
-
+import Logo from './components/Logo'
 const Slide = lazy(() => import("./components/Slide"));
 
 function App() {
@@ -17,6 +17,7 @@ function App() {
   }
   return (
     <div className="App">
+      <Logo name="Rak.logo" />
       <Suspense fallback={<Loader />}>
         <Slide slides={slides.response} reviewList={reviewList.response} />
       </Suspense>
